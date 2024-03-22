@@ -17,9 +17,9 @@ const Login = () => {
         try {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
-            // alert("User signin!")
+            alert("User signin!")
             console.log("User signed in ", user);
-            navigate('/');
+            navigate('/home');
 
         } catch (error) {
             setError(error.message);
@@ -36,6 +36,7 @@ const Login = () => {
 
             const user = result.user;
             alert("User signin!")
+            navigate('/home');
             console.log("user signed in with goggle", user);
         }
         catch (error) {
@@ -64,7 +65,7 @@ const Login = () => {
             const user = result.user;
 
             alert("User signin!")
-            navigate('/');
+            navigate('/home');
             console.log("user signed in with googel:", user);
         }
         catch (error) {
