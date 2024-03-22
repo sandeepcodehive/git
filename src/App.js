@@ -70,9 +70,12 @@ function App() {
 
             <div className="col-lg-10">
               <Routes>
-                <Route path="/home" element={<Home />} />
-                <Route path="/dataset" element={<About />} />
-                <Route path="/setting" element={<Contact />} />
+                {user?<>
+                  <Route path="/home" element={<Home />} />
+                  <Route path="/dataset" element={<About />} />
+                  <Route path="/setting" element={<Contact />} />
+                </>
+                :null}
 
                 <Route path='/login' element={user ? <Navigate to="/" /> : <Login />} />
                 <Route path='/sign' element={user ? <Navigate to="/" /> : <SignUp />} />
