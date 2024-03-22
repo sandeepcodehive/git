@@ -40,13 +40,13 @@ function App() {
                 {user ? (
                   <>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/" style={{ color: "white" }}>Home</Link>
+                      <Link className="nav-link" to="/home" style={{ color: "white" }}>Chat</Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/about" style={{ color: "white" }}>Datasets</Link>
+                      <Link className="nav-link" to="/dataset" style={{ color: "white" }}>Datasets</Link>
                     </li>
                     <li className="nav-item">
-                      <Link className="nav-link" to="/chat" style={{ color: "white" }}>Setting</Link>
+                      <Link className="nav-link" to="/setting" style={{ color: "white" }}>Setting</Link>
                     </li>
 
                     <li className="nav-item">
@@ -70,9 +70,9 @@ function App() {
 
             <div className="col-lg-10">
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/chat" element={<Contact />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/dataset" element={<About />} />
+                <Route path="/setting" element={<Contact />} />
 
                 <Route path='/login' element={user ? <Navigate to="/" /> : <Login />} />
                 <Route path='/sign' element={user ? <Navigate to="/" /> : <SignUp />} />
